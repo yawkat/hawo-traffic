@@ -21,7 +21,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BillingWeek {
-    private static final TemporalField WEEK_OF_YEAR_FIELD = WeekFields.of(DayOfWeek.MONDAY, 7).weekOfYear();
+    public static final DayOfWeek START = DayOfWeek.SUNDAY;
+    private static final TemporalField WEEK_OF_YEAR_FIELD = WeekFields.of(START, 7).weekOfYear();
 
     private int year;
     private int week;
